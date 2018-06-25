@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Booking</string>
+    <string name="welcome">Welcome</string>
+    <string name="age">You are</string>
+    <string name="distance"> km from center, </string>
+    <string name="good"> Good </string>
+    <string name="veryGood"> Very Good </string>
+    <string name="excellent"> Excellent </string>
+    <string name="wonderful"> Wonderful </string>
+    <string name="noPrepayment"> No prepayment needed </string>
+    <string name="currency"> "\u20ac" </string>
+    <string name="price"> Price:  </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

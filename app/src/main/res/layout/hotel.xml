@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?><android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/hotel_image"
+        android:layout_width="134dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hotel_info" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/hotel_info"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/hotel_image"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/hotel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/hotel_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_name">
+
+            <RatingBar
+                android:id="@+id/hotel_ratingStar1"
+                style="@style/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:stepSize="1" />
+
+            <RatingBar
+                android:id="@+id/hotel_ratingStar2"
+                style="@style/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                app:layout_constraintEnd_toStartOf="@+id/hotel_ratingStar3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hotel_ratingStar1"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+
+            <RatingBar
+                android:id="@+id/hotel_ratingStar3"
+                style="@style/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                app:layout_constraintEnd_toStartOf="@+id/hotel_ratingStar4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hotel_ratingStar2"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+
+            <RatingBar
+                android:id="@+id/hotel_ratingStar4"
+                style="@style/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                app:layout_constraintEnd_toStartOf="@+id/hotel_ratingStar5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hotel_ratingStar3"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+
+            <RatingBar
+                android:id="@+id/hotel_ratingStar5"
+                style="@style/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hotel_ratingStar4"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/hotel_rating_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/ratingButtonBackgroun"
+            android:text="8.5"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_stars" />
+
+        <TextView
+            android:id="@+id/hotel_rating_string"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/hotel_rating_num"
+            app:layout_constraintTop_toTopOf="@+id/hotel_rating_num" />
+
+        <TextView
+            android:id="@+id/hotel_address"
+            android:layout_width="207dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="4dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/hotel_location_icon"
+            app:layout_constraintStart_toEndOf="@+id/hotel_location_icon"
+            app:layout_constraintTop_toTopOf="@+id/hotel_location_icon"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/hotel_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_rating_num" />
+
+        <TextView
+            android:id="@+id/hotel_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hotel_prepayment"
+            app:layout_constraintStart_toEndOf="@+id/hotel_prepayment" />
+
+        <TextView
+            android:id="@+id/hotel_prepayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/noPrepaymentColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_location_icon" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
